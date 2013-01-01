@@ -1,0 +1,26 @@
+# postgres database.yaml
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: rpDev
+  username: alpha
+  password:
+  pool: 5
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: rpTest
+  username: alpha
+  password:
+  pool: 5
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: rpProd
+  username: alpha
+  password:
+  pool: 5
+
