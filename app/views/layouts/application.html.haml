@@ -2,12 +2,19 @@
 %html
   %head
     %title Rotten Potatoes!
-    = favicon_link_tag '/favicon.ico'
     = stylesheet_link_tag 'application'
     = javascript_include_tag 'application'
     = csrf_meta_tags
+    = favicon_link_tag '/favicon.ico'
 
   %body
-    = yield
+    %h1.title Brian's Internet Movie Database
+    #main
+      -# this goes just inside %body:
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
 
+    = yield
 
