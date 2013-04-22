@@ -2,6 +2,9 @@
 
 # This file is app/controllers/movies_controller.rb
 class MoviesController < ApplicationController
+  # Add a login to gain access to this page.
+  http_basic_authenticate_with :name => "bach", :password => "bwv1042"
+
   def index
     @movies = Movie.all
   end
